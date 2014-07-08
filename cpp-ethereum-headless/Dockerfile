@@ -5,5 +5,3 @@ RUN mkdir cpp-ethereum/build
 RUN cd cpp-ethereum/build && cmake .. -DCMAKE_BUILD_TYPE=Release -DHEADLESS=1 && make -j $(cat /proc/cpuinfo | grep processor | wc -l) && make install
 
 RUN ldconfig
-
-ENTRYPOINT ["/usr/local/bin/eth"]
