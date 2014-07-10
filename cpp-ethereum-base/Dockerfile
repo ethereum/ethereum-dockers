@@ -12,4 +12,4 @@ RUN git clone --depth=1 https://github.com/mmoss/cryptopp.git
 RUN cd cryptopp && scons --shared --prefix=/usr
 
 RUN git clone --depth=1 https://github.com/cinemast/libjson-rpc-cpp.git
-RUN cd libjson-rpc-cpp/build && cmake .. && make && make install
+RUN cd libjson-rpc-cpp/build && cmake -DHTTP_CONNECTOR=YES .. && make && make install
