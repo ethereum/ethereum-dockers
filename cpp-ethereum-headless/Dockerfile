@@ -1,4 +1,4 @@
-FROM cpp-ethereum-base
+FROM cptobvious/cpp-ethereum-base
 
 RUN git clone --depth=1 --branch=develop https://github.com/ethereum/tests
 RUN git clone --depth=1 --branch=develop https://github.com/ethereum/cpp-ethereum
