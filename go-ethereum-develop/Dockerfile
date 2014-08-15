@@ -1,5 +1,6 @@
 FROM cptobvious/go-ethereum-base
 
+RUN go get -v -u gopkg.in/qml.v1
 RUN go get -v -u -d github.com/ethereum/go-ethereum/ethereum
 RUN go get -v -u -d github.com/ethereum/go-ethereum/ethereal
 
