@@ -1,4 +1,5 @@
 FROM cptobvious/ethereumj-base
 
 RUN git clone --depth=1 https://github.com/ethereum/ethereumj
-RUN cd ethereumj && mvn package
+RUN cd ethereumj/ethereumj-core && mvn package
+RUN cd ethereumj/ethereumj-studio && mvn package
