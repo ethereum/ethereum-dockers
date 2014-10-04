@@ -12,6 +12,7 @@ RUN pip install pip-tools boto simplejson txrequests requests
 RUN pip-review -a
 
 # Create buildslave
+ENV SLAVEPASS $SLAVEPASS
 RUN buildslave create-slave -r -l 3 -s 512000 slave build.ethdev.com:9989 dockerslave $SLAVEPASS
 
 # Set slave/info/admin and slave/info/host
