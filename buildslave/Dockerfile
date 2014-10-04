@@ -31,4 +31,4 @@ command=twistd --nodaemon --no_save -y buildbot.tac" > /etc/supervisor/conf.d/bu
 # CMD ["start", "slave"]
 # ENTRYPOINT ["buildslave"]
 CMD ["-n", "-c", "/etc/supervisor/conf.d/buildbot.conf"]
-ENTRYPOINT ["/usr/local/bin/supervisord"]
+ENTRYPOINT ["/usr/bin/supervisord"]
