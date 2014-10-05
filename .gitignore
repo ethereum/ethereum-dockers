@@ -1,2 +1,5 @@
 # Temporary files
 *.swp
+
+# Config files
+buildbot.tac

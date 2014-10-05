@@ -7,6 +7,7 @@ RUN apt-get upgrade -y
 RUN apt-get install -qy build-essential g++-4.8 git cmake libboost-all-dev
 RUN apt-get install -qy automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons
 RUN apt-get install -qy libncurses5-dev libcurl4-openssl-dev wget
+RUN apt-get install -qy qtbase5-dev qt5-default qtdeclarative5-dev libqt5webkit5-dev
 
 RUN git clone --depth=1 https://github.com/mmoss/cryptopp.git
 RUN cd cryptopp && scons --shared --prefix=/usr
