@@ -1,15 +1,15 @@
 FROM cptobvious/go-ethereum-base
 
 # Buildslave dependencies
-RUN apt-get install --fix-missing -y apt-utils python-pip python-dev python-openssl supervisor git subversion mercurial bzr cvs sudo ssh vim inotify-tools
+RUN apt-get install --fix-missing -y apt-utils python-pip python-dev supervisor git inotify-tools
 
 # Clone latest buildbot
 RUN git clone https://github.com/buildbot/buildbot.git
 
 # Install buildbot
 RUN cd buildbot && git checkout eight && pip install -e slave
-RUN pip install pip-tools boto simplejson txrequests requests
-RUN pip-review -a
+RUN pip install pip-tools requests
+# RUN pip-review -a
 
 # Create buildslave
 RUN buildslave create-slave -r -l 3 -s 512000 slave build.ethdev.com:9989 dockerslave pass
