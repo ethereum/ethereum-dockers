@@ -13,7 +13,7 @@ RUN pip install pip-tools requests
 
 # Create buildslave
 RUN buildslave create-slave -r -l 3 -s 512000 slave build.ethdev.com:9989 dockerslave pass
-# Add manually set buildslave config, use .sample file or previsouly created buildslave config
+# Add manually set buildslave config, use .sample file or previously created buildslave config
 ADD buildbot.tac slave/buildbot.tac
 
 # Set slave/info/admin and slave/info/host
