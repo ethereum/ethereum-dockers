@@ -5,10 +5,10 @@ RUN go get -v -u -d code.google.com/p/go.net/websocket
 RUN go get -v -u -d code.google.com/p/go.crypto/ripemd160
 RUN go get -v -u -d github.com/ethereum/go-ethereum/ethereum
 RUN go get -v -u -d github.com/ethereum/go-ethereum/mist
-RUN go get -v -u -d github.com/obscuren/serpent-go
+RUN go get -v -u -d github.com/ethereum/serpent-go
 
-RUN cd $GOPATH/src/github.com/obscuren/serpent-go && git submodule update --init
-RUN cd $GOPATH/src/github.com/obscuren/serpent-go && go install -v
+RUN cd $GOPATH/src/github.com/ethereum/serpent-go && git submodule update --init
+RUN cd $GOPATH/src/github.com/ethereum/serpent-go && go install -v
 
 RUN cd $GOPATH/src/github.com/ethereum/go-ethereum && git checkout develop
 RUN cd $GOPATH/src/github.com/ethereum/eth-go && git checkout develop
