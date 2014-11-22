@@ -1,7 +1,7 @@
 FROM cptobvious/cpp-ethereum-base
 
 # Buildslave dependencies
-RUN apt-get install --fix-missing -y apt-utils python-pip python-dev supervisor git inotify-tools cowbuilder
+RUN apt-get install --fix-missing -y apt-utils python-pip python-dev supervisor git inotify-tools
 
 # Clone latest buildbot
 RUN git clone https://github.com/buildbot/buildbot.git

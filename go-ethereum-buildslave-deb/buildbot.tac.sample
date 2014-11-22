@@ -29,7 +29,7 @@ except ImportError:
 
 buildmaster_host = 'build.ethdev.com'
 port = 9989
-slavename = 'slave-cpp-deb'
+slavename = 'slave-go-deb'
 passwd = 'pass'
 keepalive = 600
 usepty = 0
