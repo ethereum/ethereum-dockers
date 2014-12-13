@@ -15,4 +15,4 @@ RUN apt-get install -qy libjsoncpp-dev libargtable2-dev
 RUN apt-get install -qy software-properties-common
 RUN add-apt-repository ppa:ethereum/ethereum
 RUN apt-get update
-RUN apt-get install -qy libcryptopp libjson-rpc-cpp
+RUN apt-get install -qy libcryptopp-dev libjson-rpc-cpp-dev
