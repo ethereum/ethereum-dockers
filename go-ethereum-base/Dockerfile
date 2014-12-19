@@ -15,6 +15,7 @@ RUN apt-get upgrade -y
 RUN apt-get install -qy git mercurial software-properties-common
 RUN apt-get install -qy libgmp3-dev libreadline6-dev
 RUN apt-get install -qy build-essential
+RUN apt-get install -qy qtbase5-dev
 RUN apt-get install -qy ubuntu-sdk
 RUN apt-get install -qy golang
 
