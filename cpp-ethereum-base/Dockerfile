@@ -16,3 +16,9 @@ RUN apt-get install -qy software-properties-common
 RUN add-apt-repository ppa:ethereum/ethereum
 RUN apt-get update
 RUN apt-get install -qy libcryptopp-dev libjson-rpc-cpp-dev
+
+# LLVM-3.5
+RUN wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -
+RUN echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.5 main\ndeb-src http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.5 main" > /etc/apt/sources.list.d/llvm-trusty.list
+RUN apt-get update
+RUN apt-get install -qy llvm-3.5
