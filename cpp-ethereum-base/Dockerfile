@@ -21,7 +21,7 @@ RUN apt-get install -qy libcryptopp-dev libjson-rpc-cpp-dev
 RUN wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -
 RUN echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.5 main\ndeb-src http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.5 main" > /etc/apt/sources.list.d/llvm-trusty.list
 RUN apt-get update
-RUN apt-get install -qy llvm-3.5
+RUN apt-get install -qy llvm-3.5 libedit-dev
 
 # Fix llvm-3.5 cmake paths
 RUN mkdir -p /usr/lib/llvm-3.5/share/llvm && ln -s /usr/share/llvm-3.5/cmake /usr/lib/llvm-3.5/share/llvm/cmake
