@@ -5,6 +5,8 @@ RUN apt-get install -qy mesa-common-dev libglu1-mesa-dev
 RUN add-apt-repository ppa:beineri/opt-qt54-trusty
 RUN apt-get update
 RUN apt-get install -qy qt54quickcontrols qt54webengine
+ENV LD_LIBRARY_PATH /opt/qt54/lib/x86_64-linux-gnu:/opt/qt54/lib:$LD_LIBRARY_PATH
+ENV PKG_CONFIG_PATH /opt/qt54/lib/pkgconfig:$PKG_CONFIG_PATH
 # RUN /bin/bash -c "source /opt/qt54/bin/qt54-env.sh"
 
 RUN apt-get install -qy pkg-config libpcre3-dev libpcre++-dev
