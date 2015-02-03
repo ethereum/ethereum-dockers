@@ -1,6 +1,9 @@
 FROM cptobvious/go-ethereum-base
 
 # Qt5 for master
+RUN add-apt-repository ppa:ubuntu-sdk-team/ppa
+RUN apt-get update
+RUN apt-get install -qy ubuntu-sdk
 RUN apt-get install -qy qtbase5-dev
 RUN apt-get install -qy qtbase5-private-dev qtdeclarative5-private-dev libqt5opengl5-dev
 

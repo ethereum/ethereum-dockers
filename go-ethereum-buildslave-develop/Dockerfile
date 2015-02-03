@@ -5,7 +5,7 @@ RUN apt-get install -qy mesa-common-dev libglu1-mesa-dev
 RUN add-apt-repository ppa:beineri/opt-qt54-trusty
 RUN apt-get update
 RUN apt-get install -qy qt54quickcontrols qt54webengine
-RUN /bin/bash -c "source /opt/qt54/bin/qt54-env.sh"
+# RUN /bin/bash -c "source /opt/qt54/bin/qt54-env.sh"
 
 # Buildslave dependencies
 RUN apt-get install --fix-missing -y apt-utils python-pip python-dev supervisor git inotify-tools
