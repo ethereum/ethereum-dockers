@@ -7,6 +7,8 @@ RUN apt-get update
 RUN apt-get install -qy qt54quickcontrols qt54webengine
 # RUN /bin/bash -c "source /opt/qt54/bin/qt54-env.sh"
 
+RUN apt-get install -qy pkg-config libpcre3-dev libpcre++-dev
+
 # Buildslave dependencies
 RUN apt-get install --fix-missing -y apt-utils python-pip python-dev supervisor git inotify-tools
 
