@@ -1,10 +1,10 @@
 FROM cptobvious/go-ethereum-base
 
 # Qt5 for develop
-RUN apt-get install mesa-common-dev libglu1-mesa-dev
+RUN apt-get install -qy mesa-common-dev libglu1-mesa-dev
 RUN add-apt-repository ppa:beineri/opt-qt54-trusty
 RUN apt-get update
-RUN apt-get install -y qt54quickcontrols qt54webengine
+RUN apt-get install -qy qt54quickcontrols qt54webengine
 RUN source /opt/qt54/bin/qt54-env.sh
 
 # Buildslave dependencies
