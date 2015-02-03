@@ -2,6 +2,7 @@ FROM ubuntu:14.04
 
 # Export GOPATH
 ENV GOPATH /root/go
+ENV PATH /root/go/bin:$PATH
 
 # GOPATH
 RUN mkdir -p /root/go
