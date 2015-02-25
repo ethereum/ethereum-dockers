@@ -2,7 +2,7 @@ FROM cptobvious/go-ethereum-base
 
 # Qt5 for develop
 RUN apt-get install -qy mesa-common-dev libglu1-mesa-dev
-RUN add-apt-repository ppa:beineri/opt-qt54-trusty
+RUN add-apt-repository ppa:beineri/opt-qt541-trusty
 RUN apt-get update
 RUN apt-get install -qy qt54quickcontrols qt54webengine
 ENV LD_LIBRARY_PATH /opt/qt54/lib/x86_64-linux-gnu:/opt/qt54/lib:$LD_LIBRARY_PATH
