@@ -7,6 +7,8 @@ RUN apt-get update
 RUN apt-get install -qy qt54quickcontrols qt54webengine
 ENV LD_LIBRARY_PATH /opt/qt54/lib/x86_64-linux-gnu:/opt/qt54/lib
 ENV PKG_CONFIG_PATH /opt/qt54/lib/pkgconfig
+ENV QTDIR=/opt/qt54
+RUN PATH=$QTDIR/bin:$PATH
 # RUN /bin/bash -c "source /opt/qt54/bin/qt54-env.sh"
 
 RUN apt-get install -qy pkg-config libpcre3-dev libpcre++-dev
