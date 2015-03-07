@@ -9,7 +9,7 @@ RUN apt-get upgrade -y
 RUN apt-get install -qy mesa-common-dev libglu1-mesa-dev
 RUN add-apt-repository ppa:beineri/opt-qt541-trusty
 RUN apt-get update
-RUN apt-get install -qy qt54quickcontrols qt54webengine
+RUN apt-get install -qy qt54-meta-full
 ENV LD_LIBRARY_PATH /opt/qt54/lib/x86_64-linux-gnu:/opt/qt54/lib
 ENV PKG_CONFIG_PATH /opt/qt54/lib/pkgconfig
 ENV QTDIR=/opt/qt54
