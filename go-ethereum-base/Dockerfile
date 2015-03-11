@@ -19,4 +19,4 @@ RUN apt-get install -qy golang
 # Qt5
 RUN add-apt-repository ppa:ethereum/ethereum-qt
 RUN apt-get update
-RUN apt-get install -qy qml-module-qtquick-controls qml-module-qtquick-dialogs libqt5webengine-dev
+RUN apt-get install -qy qml-module-qtquick-controls qml-module-qtquick-dialogs libqt5webengine5-dev
