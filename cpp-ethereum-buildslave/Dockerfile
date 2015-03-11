@@ -1,8 +1,5 @@
 FROM cptobvious/cpp-ethereum-base
 
-# Qt5 for master
-RUN apt-get install -qy qtbase5-dev qt5-default qtdeclarative5-dev libqt5webkit5-dev
-
 # Buildslave dependencies
 RUN apt-get install --fix-missing -y apt-utils python-pip python-dev supervisor git inotify-tools cppcheck ccache
 

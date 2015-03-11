@@ -9,6 +9,7 @@ RUN apt-get install -qy build-essential g++-4.8 git cmake libboost-all-dev
 RUN apt-get install -qy automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons
 RUN apt-get install -qy libncurses5-dev libcurl4-openssl-dev wget
 RUN apt-get install -qy libjsoncpp-dev libargtable2-dev libmicrohttpd-dev
+RUN apt-get install -qy pkg-config
 
 # Ethereum PPA
 RUN apt-get install -qy software-properties-common
@@ -24,3 +25,8 @@ RUN apt-get install -qy llvm-3.5 libedit-dev
 
 # Fix llvm-3.5 cmake paths
 RUN mkdir -p /usr/lib/llvm-3.5/share/llvm && ln -s /usr/share/llvm-3.5/cmake /usr/lib/llvm-3.5/share/llvm/cmake
+
+# Qt5
+RUN add-apt-repository ppa:ethereum/ethereum-qt
+RUN apt-get update
+RUN apt-get install -qy qml-module-qtquick-controls qml-module-qtquick-dialogs libqt5webengine-dev
