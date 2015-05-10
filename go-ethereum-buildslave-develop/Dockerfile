@@ -1,7 +1,5 @@
 FROM cptobvious/go-ethereum-base
 
-RUN apt-get install -qy pkg-config libpcre3-dev libpcre++-dev
-
 # Buildslave dependencies
 RUN apt-get install --fix-missing -y apt-utils python-pip python-dev supervisor git inotify-tools
 
