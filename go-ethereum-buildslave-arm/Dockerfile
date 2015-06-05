@@ -7,7 +7,7 @@ ENV DIST_LINUX_ARM_URL http://dave.cheney.net/paste/$DIST_LINUX_ARM
 ENV DIST_LINUX_ARM_SHA1 1bcfc8ef9c2aa381722b71b8c8d83cb58e973116
 
 ENV DIST_LINUX_GMP gmp-6.0.0a
-ENV DIST_LINUX_GMP_URL https://ftp.gnu.org/gnu/gmp/$DIST_LINUX_GMP.tar.lz
+ENV DIST_LINUX_GMP_URL https://gmplib.org/download/gmp/$DIST_LINUX_GMP.tar.lz
 ENV DIST_LINUX_GMP_SHA256 8890803a2715d592eac37dca630e36b470f047eb5ab1efe38d323b02a99ac232
 
 RUN mkdir /go-arm
