@@ -35,8 +35,9 @@ RUN \
 
 ENV CC arm-linux-gnueabi-gcc
 ENV HOST arm-linux
+ENV PREFIX /usr/local/arm
 WORKDIR /deps/gmp-6.0.0
-RUN ./configure --disable-shared --host=$HOST
+RUN ./configure --disable-shared --host=$HOST --prefix=$PREFIX
 RUN make -j install
 
 WORKDIR /
