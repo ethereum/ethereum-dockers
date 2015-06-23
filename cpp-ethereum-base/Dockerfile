@@ -13,7 +13,8 @@ RUN apt-get install -qy pkg-config
 
 # Ethereum PPA
 RUN apt-get install -qy software-properties-common
-RUN add-apt-repository ppa:ethereum/ethereum
+RUN add-apt-repository -y ppa:ethereum/ethereum
+RUN add-apt-repository -y ppa:ethereum/ethereum-dev
 RUN apt-get update
 RUN apt-get install -qy libcryptopp-dev libjson-rpc-cpp-dev
 
@@ -27,3 +28,10 @@ RUN apt-get install -qy llvm-3.5-dev llvm-3.7-dev libedit-dev libz-dev
 RUN add-apt-repository ppa:ethereum/ethereum-qt
 RUN apt-get update
 RUN apt-get install -qy qml-module-qtquick-controls qml-module-qtquick-dialogs libqt5webengine5-dev
+
+# DAG
+RUN apt-get install -qy eth
+RUN eth --create-dag 0
+RUN apt-get remove -qy eth
+RUN add-apt-repository -ry ppa:ethereum/ethereum-dev
+RUN apt-get update
