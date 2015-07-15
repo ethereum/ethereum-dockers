@@ -9,6 +9,8 @@ RUN apt-get install -qy build-essential g++-4.8 git cmake libboost-all-dev
 RUN apt-get install -qy automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons
 RUN apt-get install -qy libncurses5-dev libcurl4-openssl-dev wget
 RUN apt-get install -qy libjsoncpp-dev libargtable2-dev libmicrohttpd-dev
+RUN apt-get install -qy libv8-dev
+RUN apt-get install -qy libglu1-mesa-dev freeglut3-dev mesa-common-dev ocl-icd-libopencl1 opencl-headers
 RUN apt-get install -qy pkg-config
 
 # Ethereum PPA
