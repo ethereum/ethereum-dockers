@@ -24,7 +24,7 @@ RUN apt-get install -qy libcryptopp-dev libjson-rpc-cpp-dev
 RUN wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -
 RUN echo "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty main" > /etc/apt/sources.list.d/llvm-trusty.list
 RUN apt-get update
-RUN apt-get install -qy llvm-3.5-dev llvm-3.7-dev libedit-dev libz-dev
+RUN apt-get install -qy llvm-3.8-dev libedit-dev libz-dev
 
 # Qt5
 RUN add-apt-repository ppa:ethereum/ethereum-qt
