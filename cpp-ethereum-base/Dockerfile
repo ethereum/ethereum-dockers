@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get install -qy build-essential g++-4.8 git cmake libboost-all-dev
+RUN apt-get install -qy build-essential g++-4.8 git libboost-all-dev
 RUN apt-get install -qy automake unzip libgmp-dev libtool libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons
 RUN apt-get install -qy libncurses5-dev libcurl4-openssl-dev wget
 RUN apt-get install -qy libjsoncpp-dev libargtable2-dev libmicrohttpd-dev
@@ -16,9 +16,8 @@ RUN apt-get install -qy pkg-config
 # Ethereum PPA
 RUN apt-get install -qy software-properties-common
 RUN add-apt-repository -y ppa:ethereum/ethereum
-RUN add-apt-repository -y ppa:ethereum/ethereum-dev
 RUN apt-get update
-RUN apt-get install -qy libcryptopp-dev libjson-rpc-cpp-dev
+RUN apt-get install -qy libcryptopp-dev libjson-rpc-cpp-dev cmake
 
 # LLVM
 RUN wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add -
