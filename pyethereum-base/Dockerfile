@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.2
+FROM ubuntu:xenial
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
